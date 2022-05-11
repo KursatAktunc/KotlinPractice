@@ -12,7 +12,7 @@ class ProductsViewHolder(private val binding: ProductsItemBinding) :
         binding.model = item
         binding.productImageView.load(item.image) {
             crossfade(true)
-            placeholder(R.mipmap.ic_launcher)
+            placeholder(R.drawable.ic_launcher_foreground)
         }
 
     }
