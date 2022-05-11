@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Kotlin_Practice.iml" filepath="$PROJECT_DIR$/.idea/modules/Kotlin_Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kotlin_Practice.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kotlin_Practice.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kotlin_Practice.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kotlin_Practice.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kotlin_Practice.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kotlin_Practice.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kotlin_Practice.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kotlin_Practice.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
