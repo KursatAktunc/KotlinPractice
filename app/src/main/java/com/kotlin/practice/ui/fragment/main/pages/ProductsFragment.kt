@@ -1,28 +1,20 @@
 package com.kotlin.practice.ui.fragment.main.pages
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import com.kotlin.practice.R
+import com.kotlin.practice.base.BaseFragment
 import com.kotlin.practice.databinding.FragmentProductsBinding
+import com.kotlin.practice.viewmodel.ProductsFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-//class ProductsFragment : BaseFragment<FragmentProductsBinding, ProductsFragmentViewModel>()
-class ProductsFragment : Fragment() {
-    private var _binding: FragmentProductsBinding? = null
-    private val binding get() = _binding!!
+@AndroidEntryPoint
+class ProductsFragment : BaseFragment<FragmentProductsBinding, ProductsFragmentViewModel>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentProductsBinding.inflate(inflater, container, false)
+    override val mViewModel: ProductsFragmentViewModel by viewModels()
 
-        return binding.root
-    }
+    override fun bindLayoutId(): Int = R.layout.fragment_products
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun initViews() {
+        mBinding.viewModel = mViewModel
     }
 }

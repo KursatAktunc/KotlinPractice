@@ -3,7 +3,9 @@ package com.kotlin.practice
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kotlin.practice.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
