@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_item"
+        android:title="mail_subheader_title">
+        <menu>
+            <item
+                android:id="@+id/search_item"
+                android:icon="@drawable/ic_products"
+                android:title="search_title"
+                android:checkable="true" />
+            <item
+                android:id="@+id/rotation_item"
+                android:icon="@drawable/ic_products"
+                android:title="3d_title"
+                android:checkable="true" />
+            <item
+                android:id="@+id/accelerator_item"
+                android:icon="@drawable/ic_products"
+                android:title="accelerator_title"
+                android:checkable="true" />
+            <item
+                android:id="@+id/dashboard_item"
+                android:icon="@drawable/ic_products"
+                android:title="dashboard_title"
+                android:checkable="true" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/labels_item"
+        android:title="labels_subheader_title">
+        <menu>
+            <item
+                android:id="@+id/label_one"
+                android:icon="@drawable/ic_products"
+                android:title="label_one_title"
+                android:checkable="true" />
+            <item
+                android:id="@+id/label_two"
+                android:icon="@drawable/ic_products"
+                android:title="label_two_title"
+                android:checkable="true" />
+        </menu>
+    </item>
+
+</menu>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/main_item"
+            android:title="mail_subheader_title">
+            <menu>
+                <item
+                    android:id="@+id/inbox_item"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_baseline_menu_24"
+                    android:title="inbox_title" />
+                <item
+                    android:id="@+id/outbox_item"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_baseline_5g_24"
+                    android:title="outbox_title" />
+                <item
+                    android:id="@+id/favourites_item"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_baseline_menu_24"
+                    android:title="favourites_title" />
+            </menu>
+        </item>
+
+    </menu>-->
+

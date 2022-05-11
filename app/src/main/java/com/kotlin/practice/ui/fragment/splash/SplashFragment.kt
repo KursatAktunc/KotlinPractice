@@ -27,7 +27,7 @@ class SplashFragment : Fragment() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             lifecycleScope.launchWhenResumed {
-                findNavController().navigate(R.id.action_splashFragment_to_productsFragment)
+                findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
             }
         }, 2000)
 
