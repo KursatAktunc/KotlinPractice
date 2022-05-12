@@ -2,9 +2,11 @@ package com.kotlin.practice
 
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.navigation.findNavController
 import com.kotlin.practice.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -19,10 +21,16 @@ class MainActivity : AppCompatActivity() {
         hideSystemBar()
     }
 
+    /*override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.fragmentContainerView)   //Dene
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }*/
+
     private fun hideSystemBar() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        window.decorView.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_FULLSCREEN //geçici kod
+
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN //geçici kod
+
         WindowInsetsControllerCompat(
             window,
             binding.root
