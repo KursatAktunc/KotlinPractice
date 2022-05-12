@@ -11,10 +11,16 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_appIntroFragment"
-            app:destination="@id/appIntroFragment" />
+            app:destination="@id/appIntroFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+        <!--app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" bu kodu splash fragment geri dönmeyi engellemek için ekledik-->
         <action
             android:id="@+id/action_splashFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/appIntroFragment"
