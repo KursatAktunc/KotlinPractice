@@ -6,11 +6,9 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.kotlin.practice.databinding.FragmentMainBinding
-import com.kotlin.practice.viewmodel.MainFragmentViewModel
-import dagger.hilt.android.AndroidEntryPoint
 
 //@AndroidEntryPoint
 class MainFragment : Fragment() {
@@ -24,6 +22,8 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
+
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
 
         setHasOptionsMenu(true)
 
