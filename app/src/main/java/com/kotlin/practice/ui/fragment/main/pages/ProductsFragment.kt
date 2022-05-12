@@ -1,6 +1,7 @@
 package com.kotlin.practice.ui.fragment.main.pages
 
 import android.util.Log
+import android.view.View
 import androidx.fragment.app.viewModels
 import com.kotlin.practice.R
 import com.kotlin.practice.adapter.ProductsAdapter
@@ -27,14 +28,17 @@ class ProductsFragment : BaseFragment<FragmentProductsBinding, ProductsFragmentV
             when (it.status) {
                 ResourceStatus.PROGRESS -> {
                     Log.v("TAG", "progress")
+                    mBinding.productProgressBar.visibility= View.VISIBLE
                 }
                 ResourceStatus.SUCCESS -> {
                     Log.v("TAG", "success")
                     adapter = ProductsAdapter(it.data!!)
                     mBinding.productsRV.adapter = adapter
+                    mBinding.productProgressBar.visibility= View.GONE
                 }
                 ResourceStatus.ERROR -> {
                     Log.v("TAG", "error")
+                    mBinding.productProgressBar.visibility= View.GONE
                 }
             }
         }
