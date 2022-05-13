@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Kotlin_Practice" parent="Theme.Material3.DayNight">
         <!-- Primary brand color. -->
@@ -12,6 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.App" parent="Theme.Material3.DayNight">
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 </resources>
 

@@ -1,23 +1,65 @@
 package com.kotlin.practice.ui.fragment.main
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.kotlin.practice.R
+import com.kotlin.practice.base.BaseFragment
 import com.kotlin.practice.databinding.FragmentMainBinding
+import com.kotlin.practice.viewmodel.MainFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-//@AndroidEntryPoint
-class MainFragment : Fragment() {
+@AndroidEntryPoint
+class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() {
 
-    private var _binding: FragmentMainBinding? = null
-    private val binding get() = _binding!!
+    /*private var _binding: FragmentMainBinding? = null
+    private val binding get() = _binding!!*/
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
+    override val mViewModel: MainFragmentViewModel by viewModels()
 
-    override fun onCreateView(
+    override fun bindLayoutId(): Int {
+        return R.layout.fragment_main
+    }
+
+    override fun initViews() {
+        mBinding.viewModel = mViewModel
+
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+
+        setHasOptionsMenu(true)
+
+        actionBarDrawerToggle =
+            ActionBarDrawerToggle(requireActivity(), mBinding.drawerLayout, 0, 0)
+        mBinding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
+        actionBarDrawerToggle.syncState()
+
+        actionBarDrawerToggle.isDrawerSlideAnimationEnabled = true
+        actionBarDrawerToggle.isDrawerIndicatorEnabled = true
+
+        mBinding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.page_1 -> {
+                    childFragmentManager.primaryNavigationFragment?.findNavController()
+                        ?.navigate(R.id.productsFragment)
+                    true
+                }
+                R.id.page_2 -> {
+                    childFragmentManager.primaryNavigationFragment?.findNavController()
+                        ?.navigate(R.id.favoriteFragment)
+                    true
+                }
+                R.id.page_3 -> {
+
+                    true
+                }
+                else -> false
+            }
+        }
+    }
+
+    /*override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -35,7 +77,7 @@ class MainFragment : Fragment() {
         actionBarDrawerToggle.isDrawerIndicatorEnabled = true
 
         return binding.root
-    }
+    }*/
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (actionBarDrawerToggle.onOptionsItemSelected(item))
@@ -43,8 +85,4 @@ class MainFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
