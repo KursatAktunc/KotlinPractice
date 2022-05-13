@@ -7,22 +7,22 @@
         <menu>
             <item
                 android:id="@+id/search_item"
-                android:icon="@drawable/ic_products"
+                android:icon="@drawable/ic_home_icon"
                 android:title="search_title"
                 android:checkable="true" />
             <item
                 android:id="@+id/rotation_item"
-                android:icon="@drawable/ic_products"
+                android:icon="@drawable/ic_home_icon"
                 android:title="3d_title"
                 android:checkable="true" />
             <item
                 android:id="@+id/accelerator_item"
-                android:icon="@drawable/ic_products"
+                android:icon="@drawable/ic_home_icon"
                 android:title="accelerator_title"
                 android:checkable="true" />
             <item
                 android:id="@+id/dashboard_item"
-                android:icon="@drawable/ic_products"
+                android:icon="@drawable/ic_home_icon"
                 android:title="dashboard_title"
                 android:checkable="true" />
         </menu>
@@ -33,12 +33,12 @@
         <menu>
             <item
                 android:id="@+id/label_one"
-                android:icon="@drawable/ic_products"
+                android:icon="@drawable/ic_favorite_icon"
                 android:title="label_one_title"
                 android:checkable="true" />
             <item
                 android:id="@+id/label_two"
-                android:icon="@drawable/ic_products"
+                android:icon="@drawable/ic_favorite_icon"
                 android:title="label_two_title"
                 android:checkable="true" />
         </menu>

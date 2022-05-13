@@ -2,16 +2,16 @@
     <item
         android:id="@+id/page_1"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_account_balance_wallet_24"
-        android:title="GIRIS" />
+        android:icon="@drawable/ic_home_icon"
+        android:title="@string/bottom_nav_home" />
     <item
         android:id="@+id/page_2"
         android:enabled="true"
-        android:icon="@drawable/ic_products"
-        android:title="MENU" />
+        android:icon="@drawable/ic_favorite_icon"
+        android:title="@string/bottom_nav_favorite" />
     <item
         android:id="@+id/page_3"
         android:enabled="true"
-        android:icon="@drawable/ic_wallet"
-        android:title="Wallet" />
+        android:icon="@drawable/ic_account_icon"
+        android:title="@string/bottom_nav_account" />
 </menu>
