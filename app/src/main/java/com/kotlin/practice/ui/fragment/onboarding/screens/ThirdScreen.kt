@@ -22,9 +22,6 @@ class ThirdScreen : Fragment() {
     ): View {
         _binding = FragmentThirdScreenBinding.inflate(inflater, container, false)
 
-        binding.btnFinis.setOnClickListener {
-            findNavController().navigate(R.id.action_onBoardingMainFragment_to_mainFragment)
-        }
 
         return binding.root
     }

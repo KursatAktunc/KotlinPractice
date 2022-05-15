@@ -1,5 +1,41 @@
 package com.kotlin.practice.ui.fragment.splash
 
+import android.os.Handler
+import android.os.Looper
+import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.kotlin.practice.R
+import com.kotlin.practice.base.BaseFragment
+import com.kotlin.practice.databinding.FragmentSplashBinding
+import com.kotlin.practice.viewmodel.SplashFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class SplashFragment : BaseFragment<FragmentSplashBinding, SplashFragmentViewModel>() {
+
+    override val mViewModel: SplashFragmentViewModel
+        get() = TODO("Not yet implemented")
+
+    override fun bindLayoutId(): Int = R.layout.fragment_splash
+
+    override fun initViews() {
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+        mBinding.imageView.animation = AnimationUtils.loadAnimation(context, R.anim.splash_anim)
+        Handler(Looper.getMainLooper()).postDelayed({
+            lifecycleScope.launchWhenResumed {
+                //findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
+                findNavController().navigate(R.id.action_splashFragment_to_onBoardingMainFragment)
+            }
+        }, 2000)
+    }
+}
+
+//TODO @AndroidEntryPoint uygulamanın çökmesine neden oluyor
+
+/*package com.kotlin.practice.ui.fragment.splash
+
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -45,4 +81,4 @@ class SplashFragment : Fragment() {
     }
 }
 
-//TODO @AndroidEntryPoint uygulamanın çökmesine neden oluyor
+//TODO @AndroidEntryPoint uygulamanın çökmesine neden oluyor*/
