@@ -1,6 +1,5 @@
-package com.kotlin.practice.ui.fragment.main.pages
+package com.kotlin.practice.ui.fragment.main.screens
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater

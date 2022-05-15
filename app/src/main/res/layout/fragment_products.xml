@@ -14,7 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.fragment.main.pages.ProductsFragment">
+        tools:context=".ui.fragment.main.screens.ProductsFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/productsRV"

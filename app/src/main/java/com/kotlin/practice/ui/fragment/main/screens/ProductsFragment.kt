@@ -1,4 +1,4 @@
-package com.kotlin.practice.ui.fragment.main.pages
+package com.kotlin.practice.ui.fragment.main.screens
 
 import android.util.Log
 import android.view.View
