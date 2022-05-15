@@ -35,6 +35,8 @@ class OnBoardingMainFragment : Fragment() {
 
         binding.viewPager.adapter = adapter
 
+        binding.wormDotsIndicator.attachTo(binding.viewPager)
+
         return binding.root
     }
 
