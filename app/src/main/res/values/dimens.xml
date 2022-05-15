@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txtTitle">20sp</dimen>
+    <dimen name="txtContent">20sp</dimen>
+    <dimen name="txtDescription">16sp</dimen>
+</resources>
