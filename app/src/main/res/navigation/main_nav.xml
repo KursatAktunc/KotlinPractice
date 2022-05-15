@@ -24,9 +24,9 @@
     </fragment>
     <fragment
         android:id="@+id/appIntroFragment"
-        android:name="com.kotlin.practice.ui.fragment.appintro.AppIntroFragment"
+        android:name="com.kotlin.practice.ui.fragment.onboarding.OnBoardingMainFragment"
         android:label="fragment_app_intro"
-        tools:layout="@layout/fragment_app_intro" >
+        tools:layout="@layout/fragment_onboarding_main" >
         <action
             android:id="@+id/action_appIntroFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
