@@ -14,6 +14,5 @@ class ProductsViewHolder(private val binding: ProductsItemBinding) :
             crossfade(true)
             placeholder(R.drawable.ic_launcher_foreground)
         }
-
     }
 }

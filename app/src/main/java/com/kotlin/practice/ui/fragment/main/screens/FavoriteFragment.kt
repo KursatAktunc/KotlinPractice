@@ -1,25 +1,27 @@
 package com.kotlin.practice.ui.fragment.main.screens
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.util.Log
+import android.widget.Toast
+import androidx.fragment.app.viewModels
 import com.kotlin.practice.R
-import com.kotlin.practice.viewmodel.FavoriteViewModel
+import com.kotlin.practice.base.BaseFragment
+import com.kotlin.practice.databinding.FragmentFavoriteBinding
+import com.kotlin.practice.viewmodel.FavoriteFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-class FavoriteFragment : Fragment() {
+private const val TAG: String = "FavoriteFragment"
 
-    companion object {
-        fun newInstance() = FavoriteFragment()
-    }
+@AndroidEntryPoint
+class FavoriteFragment : BaseFragment<FragmentFavoriteBinding, FavoriteFragmentViewModel>() {
 
-    private lateinit var viewModel: FavoriteViewModel
+    override val mViewModel: FavoriteFragmentViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_favorite, container, false)
+    override fun bindLayoutId(): Int = R.layout.fragment_favorite
+
+    override fun initViews() {
+        mBinding.floatingActionButton.setOnClickListener {
+            Toast.makeText(context, "Test Clicked", Toast.LENGTH_SHORT).show()
+            Log.d(TAG, "Test Log")
+        }
     }
 }

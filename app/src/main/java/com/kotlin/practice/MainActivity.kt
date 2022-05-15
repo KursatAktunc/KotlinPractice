@@ -2,11 +2,10 @@ package com.kotlin.practice
 
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.navigation.findNavController
 import com.kotlin.practice.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        hideSystemBar()
+
+        //hideSystemBar()
     }
 
     /*override fun onSupportNavigateUp(): Boolean {
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     private fun hideSystemBar() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN //geçici kod
+        //window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN //geçici kod
 
         WindowInsetsControllerCompat(
             window,
@@ -39,6 +39,13 @@ class MainActivity : AppCompatActivity() {
             controller.systemBarsBehavior =
                 WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
+
+        //TODO bu kodun çalışmasını kontrol et
+        val windowInsetsController =
+            ViewCompat.getWindowInsetsController(window.decorView) ?: return
+        windowInsetsController.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
     }
 
     override fun onResume() {

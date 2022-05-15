@@ -14,10 +14,11 @@ import javax.inject.Inject
 class SplashFragmentViewModel @Inject constructor(private val repository: OnBoardingRepository) :
     BaseViewModel() {
 
-    private val _isLoading = MutableStateFlow<Boolean>(true)
+    private val _isLoading = MutableStateFlow(true)
     val isLoading: StateFlow<Boolean> = _isLoading
 
-    private val _startDestination = MutableStateFlow<Int>(R.id.action_splashFragment_to_onBoardingMainFragment)
+    private val _startDestination =
+        MutableStateFlow(R.id.action_splashFragment_to_onBoardingMainFragment)
     val startDestination: StateFlow<Int> = _startDestination
 
     init {

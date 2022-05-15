@@ -1,4 +1,5 @@
 package com.kotlin.practice.models
+
 import com.google.gson.annotations.SerializedName
 
 data class Products(

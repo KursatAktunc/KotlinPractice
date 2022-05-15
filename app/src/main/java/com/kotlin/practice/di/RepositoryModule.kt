@@ -1,6 +1,7 @@
 package com.kotlin.practice.di
 
 import android.content.Context
+import com.kotlin.practice.repository.FavoriteRepository
 import com.kotlin.practice.repository.OnBoardingRepository
 import com.kotlin.practice.repository.ProductsRepository
 import com.kotlin.practice.service.ApiService
@@ -21,4 +22,8 @@ object RepositoryModule {
     @Provides
     fun provideOnBoardingRepository(@ApplicationContext context: Context) =
         OnBoardingRepository(context = context)
+
+    @Provides
+    fun provideFavoriteRepository(@ApplicationContext context: Context) =
+        FavoriteRepository(context = context)
 }

@@ -1,6 +1,7 @@
 package com.kotlin.practice.repository
 
 import android.content.Context
+import android.util.Log
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
@@ -15,8 +16,9 @@ import java.io.IOException
 import javax.inject.Inject
 
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = Constants.FIRST_RUN_KEY)
+private const val TAG: String = "OnBoardingRepository"
 
-class OnBoardingRepository @Inject constructor(private val context: Context) {
+class OnBoardingRepository @Inject constructor(context: Context) {
     private object PreferencesKey {
         val onBoardingKey = booleanPreferencesKey(name = Constants.FIRST_RUN_KEY)
     }
@@ -32,9 +34,10 @@ class OnBoardingRepository @Inject constructor(private val context: Context) {
     fun readOnBoardingState(): Flow<Boolean> {
         return dataStore.data
             .catch { exception ->
-                if (exception is IOException)
+                if (exception is IOException) {
+                    Log.d(TAG, exception.message.toString())
                     emit(emptyPreferences())
-                else
+                } else
                     throw exception
             }.map { preferences ->
                 val onBoardingState = preferences[PreferencesKey.onBoardingKey] ?: false
