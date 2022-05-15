@@ -9,11 +9,6 @@
         android:name="com.kotlin.practice.ui.fragment.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
-        <action
-            android:id="@+id/action_splashFragment_to_appIntroFragment"
-            app:destination="@id/appIntroFragment"
-            app:popUpTo="@id/splashFragment"
-            app:popUpToInclusive="true"/>
         <!--app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" bu kodu splash fragment geri dönmeyi engellemek için ekledik-->
         <action
@@ -21,19 +16,21 @@
             app:destination="@id/mainFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true"/>
-    </fragment>
-    <fragment
-        android:id="@+id/appIntroFragment"
-        android:name="com.kotlin.practice.ui.fragment.onboarding.OnBoardingMainFragment"
-        android:label="fragment_app_intro"
-        tools:layout="@layout/fragment_onboarding_main" >
         <action
-            android:id="@+id/action_appIntroFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_splashFragment_to_onBoardingMainFragment"
+            app:destination="@id/onBoardingMainFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.kotlin.practice.ui.fragment.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/onBoardingMainFragment"
+        android:name="com.kotlin.practice.ui.fragment.onboarding.OnBoardingMainFragment"
+        android:label="OnBoardingMainFragment" >
+        <action
+            android:id="@+id/action_onBoardingMainFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tbuonomo:dotsindicator:4.3@aar">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/242434c73f2da5a84c763f22e73442c9/transformed/dotsindicator-4.3-debug/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/242434c73f2da5a84c763f22e73442c9/transformed/dotsindicator-4.3-debug/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/242434c73f2da5a84c763f22e73442c9/transformed/dotsindicator-4.3-debug/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -31,7 +31,8 @@ class SplashFragment : Fragment() {
         binding.imageView.animation = AnimationUtils.loadAnimation(context, R.anim.splash_anim)
         Handler(Looper.getMainLooper()).postDelayed({
             lifecycleScope.launchWhenResumed {
-                findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
+                //findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
+                findNavController().navigate(R.id.action_splashFragment_to_onBoardingMainFragment)
             }
         }, 2000)
 
