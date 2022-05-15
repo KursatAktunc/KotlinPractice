@@ -341,7 +341,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/E:/Android_SDK/icons/material/materialicons/account_circle/baseline_account_circle_24.xml" />
+                                      <entry key="url" value="file:/E:/Android_SDK/icons/material/materialicons/navigate_before/baseline_navigate_before_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -351,7 +351,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_account_icon" />
+                            <entry key="outputName" value="ic_navigate_before" />
                             <entry key="sourceFile" value="C:\Users\sLyR_eXtreme\Desktop\icons8_wallet.svg" />
                           </map>
                         </option>

@@ -41,25 +41,25 @@ class OnBoardingMainFragment : Fragment() {
         binding.viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 if (position == 0)
-                    binding.button3.visibility = View.INVISIBLE
+                    binding.btnPrev.visibility = View.INVISIBLE
                 else
-                    binding.button3.visibility = View.VISIBLE
+                    binding.btnPrev.visibility = View.VISIBLE
 
                 if (position == 2)
-                    binding.button2.visibility = View.INVISIBLE
+                    binding.btnNext.visibility = View.INVISIBLE
                 else
-                    binding.button2.visibility = View.VISIBLE
+                    binding.btnNext.visibility = View.VISIBLE
             }
 
             override fun onPageScrolled(arg0: Int, arg1: Float, arg2: Int) {}
             override fun onPageScrollStateChanged(arg0: Int) {}
         })
 
-        binding.button2.setOnClickListener {
+        binding.btnNext.setOnClickListener {
             binding.viewPager2.setCurrentItem(binding.viewPager2.currentItem + 1, true)
         }
 
-        binding.button3.setOnClickListener {
+        binding.btnPrev.setOnClickListener {
             binding.viewPager2.setCurrentItem(binding.viewPager2.currentItem - 1, true)
         }
 
