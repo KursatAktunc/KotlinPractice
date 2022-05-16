@@ -12,5 +12,6 @@
     <string name="onBoarding_fast">FAST</string>
     <string name="onBoarding_food">FOOD</string>
     <string name="onBoarding_payment">PAYMENT</string>
+    <string name="onBoarding_finish">FINIS</string>
 
 </resources>

@@ -2,7 +2,6 @@ package com.kotlin.practice.ui.fragment.onboarding
 
 import android.view.View
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.kotlin.practice.R
 import com.kotlin.practice.adapter.OnBoardingAdapter
@@ -45,10 +44,10 @@ class OnBoardingMainFragment : BaseFragment<FragmentOnboardingMainBinding, OnBoa
                     mBinding.btnPrev.visibility = View.VISIBLE
 
                 if (position == 2) {
-                    mBinding.btnFinis.visibility = View.VISIBLE
+                    //mBinding.btnFinis.visibility = View.VISIBLE
                     mBinding.btnNext.visibility = View.INVISIBLE
                 } else {
-                    mBinding.btnFinis.visibility = View.GONE
+                    //mBinding.btnFinis.visibility = View.GONE
                     mBinding.btnNext.visibility = View.VISIBLE
                 }
             }
@@ -63,11 +62,6 @@ class OnBoardingMainFragment : BaseFragment<FragmentOnboardingMainBinding, OnBoa
 
         mBinding.btnPrev.setOnClickListener {
             mBinding.viewPager2.setCurrentItem(mBinding.viewPager2.currentItem - 1, true)
-        }
-
-        mBinding.btnFinis.setOnClickListener {
-            mViewModel.saveOnBoardingState(completed = true)
-            findNavController().navigate(R.id.action_onBoardingMainFragment_to_mainFragment)
         }
     }
 }

@@ -21,5 +21,4 @@ open class BaseViewModel : ViewModel() {
     fun navigate(action: NavDirections, bundle: Bundle? = null) {
         navigationAction.postValue(action)
     }
-
 }
