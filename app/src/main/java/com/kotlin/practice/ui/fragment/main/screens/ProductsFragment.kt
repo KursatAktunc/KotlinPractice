@@ -53,7 +53,6 @@ class ProductsFragment : BaseFragment<FragmentProductsBinding, ProductsFragmentV
                     }
                     ResourceStatus.ERROR -> {
                         Log.v(TAG, "error")
-                        toastHelper.showToastLong("Error, connection rechecking!")
                         mViewModel.getAllProducts()
                     }
                 }

@@ -23,4 +23,5 @@ class OnBoardingViewModel @Inject constructor(private val repository: OnBoarding
         saveOnBoardingState(completed = true)
         navigate(OnBoardingMainFragmentDirections.actionOnBoardingMainFragmentToMainFragment())
     }
+
 }
