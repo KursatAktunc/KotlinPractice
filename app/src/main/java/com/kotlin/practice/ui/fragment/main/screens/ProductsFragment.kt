@@ -10,6 +10,8 @@ import com.kotlin.practice.base.BaseFragment
 import com.kotlin.practice.base.ResourceStatus
 import com.kotlin.practice.databinding.FragmentProductsBinding
 import com.kotlin.practice.util.ToastHelper
+import com.kotlin.practice.util.extensions.hide
+import com.kotlin.practice.util.extensions.show
 import com.kotlin.practice.viewmodel.ProductsFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -46,8 +48,8 @@ class ProductsFragment : BaseFragment<FragmentProductsBinding, ProductsFragmentV
                         adapter = ProductsAdapter(it.data!!)
                         mBinding.productsRV.adapter = adapter
                         mBinding.shimmer.stopShimmer()
-                        mBinding.shimmer.visibility = View.GONE
-                        mBinding.productsRV.visibility = View.VISIBLE
+                        mBinding.shimmer.hide()
+                        mBinding.productsRV.show()
                     }
                     ResourceStatus.ERROR -> {
                         Log.v(TAG, "error")

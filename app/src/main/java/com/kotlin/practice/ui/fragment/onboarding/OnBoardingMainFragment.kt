@@ -1,6 +1,5 @@
 package com.kotlin.practice.ui.fragment.onboarding
 
-import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.kotlin.practice.R
@@ -10,6 +9,8 @@ import com.kotlin.practice.databinding.FragmentOnboardingMainBinding
 import com.kotlin.practice.ui.fragment.onboarding.screens.FirstScreen
 import com.kotlin.practice.ui.fragment.onboarding.screens.SecondScreen
 import com.kotlin.practice.ui.fragment.onboarding.screens.ThirdScreen
+import com.kotlin.practice.util.extensions.hide
+import com.kotlin.practice.util.extensions.show
 import com.kotlin.practice.viewmodel.OnBoardingViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -39,16 +40,14 @@ class OnBoardingMainFragment : BaseFragment<FragmentOnboardingMainBinding, OnBoa
             ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 if (position == 0)
-                    mBinding.btnPrev.visibility = View.INVISIBLE
+                    mBinding.btnPrev.hide()
                 else
-                    mBinding.btnPrev.visibility = View.VISIBLE
+                    mBinding.btnPrev.show()
 
                 if (position == 2) {
-                    //mBinding.btnFinis.visibility = View.VISIBLE
-                    mBinding.btnNext.visibility = View.INVISIBLE
+                    mBinding.btnNext.hide()
                 } else {
-                    //mBinding.btnFinis.visibility = View.GONE
-                    mBinding.btnNext.visibility = View.VISIBLE
+                    mBinding.btnNext.show()
                 }
             }
 
