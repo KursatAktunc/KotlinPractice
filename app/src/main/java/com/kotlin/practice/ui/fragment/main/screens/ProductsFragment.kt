@@ -39,18 +39,19 @@ class ProductsFragment : BaseFragment<FragmentProductsBinding, ProductsFragmentV
                 when (it.status) {
                     ResourceStatus.PROGRESS -> {
                         Log.v(TAG, "progress")
-                        mBinding.productProgressBar.visibility = View.VISIBLE
+                        mBinding.shimmer.startShimmer()
                     }
                     ResourceStatus.SUCCESS -> {
                         Log.v(TAG, "success")
                         adapter = ProductsAdapter(it.data!!)
                         mBinding.productsRV.adapter = adapter
-                        mBinding.productProgressBar.visibility = View.GONE
+                        mBinding.shimmer.stopShimmer()
+                        mBinding.shimmer.visibility = View.GONE
+                        mBinding.productsRV.visibility = View.VISIBLE
                     }
                     ResourceStatus.ERROR -> {
                         Log.v(TAG, "error")
                         toastHelper.showToastLong("Error, connection rechecking!")
-                        mBinding.productProgressBar.visibility = View.GONE
                         mViewModel.getAllProducts()
                     }
                 }

@@ -75,8 +75,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
+            android:fontFamily="@font/megum"
             android:onClick="@{() -> viewmodel.finisOnBoardingClick()}"
             android:text="@string/onBoarding_finish"
+            android:textColor="@color/purple_200"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtContent" />

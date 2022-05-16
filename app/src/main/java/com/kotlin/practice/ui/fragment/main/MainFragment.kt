@@ -14,8 +14,6 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() {
 
-    /*private var _binding: FragmentMainBinding? = null
-    private val binding get() = _binding!!*/
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
     override val mViewModel: MainFragmentViewModel by viewModels()
 
