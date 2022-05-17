@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.core:core:1.8.0-rc01@aar">
+    <ANNOTATIONS>
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/42c0974c1973bc2957b1b07e55b856c3/transformed/core-1.8.0-rc01/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/42c0974c1973bc2957b1b07e55b856c3/transformed/core-1.8.0-rc01/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/42c0974c1973bc2957b1b07e55b856c3/transformed/core-1.8.0-rc01/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/42c0974c1973bc2957b1b07e55b856c3/transformed/core-1.8.0-rc01/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/caches/modules-2/files-2.1/androidx.core/core/1.8.0-rc01/10fed94193b7a39c7b9316ffef5ca4d59bbd4043/core-1.8.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

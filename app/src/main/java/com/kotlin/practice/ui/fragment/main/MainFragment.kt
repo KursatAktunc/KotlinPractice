@@ -26,7 +26,11 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
 
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
 
-        setHasOptionsMenu(true)
+        /* val navHostFragment = childFragmentManager.findFragmentById(R.id.fragmentContainerView2)
+                 as NavHostFragment
+         val navController = navHostFragment.navController*/
+
+        setHasOptionsMenu(true) //TODO Deprecated search and fix
 
         actionBarDrawerToggle =
             ActionBarDrawerToggle(requireActivity(), mBinding.drawerLayout, 0, 0)
@@ -37,8 +41,12 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
         actionBarDrawerToggle.isDrawerIndicatorEnabled = true
 
         mBinding.bottomNavigation.setOnItemSelectedListener { item ->
+            if (mBinding.bottomNavigation.selectedItemId == item.itemId) {
+                return@setOnItemSelectedListener false
+            }
             when (item.itemId) {
                 R.id.page_1 -> {
+                    /*navHostFragment.findNavController().navigate(R.id.productsFragment)*/
                     childFragmentManager.primaryNavigationFragment?.findNavController()
                         ?.navigate(R.id.productsFragment)
                     true
@@ -55,6 +63,8 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
                 else -> false
             }
         }
+
+        //mBinding.bottomNavigation.setOnNavigationItemReselectedListener { } is deprecated bunun yerine if sorgusu ile kontrol sağladım
     }
 
     /*override fun onCreateView(
@@ -77,10 +87,10 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
         return binding.root
     }*/
 
+    //TODO Deprecated search and fix
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (actionBarDrawerToggle.onOptionsItemSelected(item))
             return true
         return super.onOptionsItemSelected(item)
     }
-
 }

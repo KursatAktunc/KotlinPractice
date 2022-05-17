@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.activity:activity:1.5.0-rc01@aar">
+    <ANNOTATIONS>
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/c039d06db122344d9ddd8051b42e33bf/transformed/activity-1.5.0-rc01/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/c039d06db122344d9ddd8051b42e33bf/transformed/activity-1.5.0-rc01/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/c039d06db122344d9ddd8051b42e33bf/transformed/activity-1.5.0-rc01/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/c039d06db122344d9ddd8051b42e33bf/transformed/activity-1.5.0-rc01/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/caches/modules-2/files-2.1/androidx.activity/activity/1.5.0-rc01/dcc2cf874dbc325a477a11f1791cc04018910a52/activity-1.5.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

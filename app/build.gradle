@@ -43,11 +43,16 @@ dependencies {
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def nav_version = "2.4.2"
-    def fragment_version = "1.4.1"
+    def fragment_version = "1.5.0-rc01"
     def retrofit_version = "2.9.0"
-    def lifecycle_version = "2.4.1"
+    def lifecycle_version = "2.5.0-rc01"
     def dagger_hilt_version = "2.42"
     def coroutines = "1.6.1"
+    def material = "1.7.0-alpha01"
+    def coil = "2.0.0"
+    def dotsIndicator = "4.3"
+    def datastore_preferences = "1.0.0"
+    def facebook_shimmer = "0.5.0"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -57,7 +62,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //Material
-    implementation 'com.google.android.material:material:1.6.0'
+    implementation "com.google.android.material:material:$material"
 
     //Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
@@ -86,14 +91,14 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
 
     //Coil
-    implementation "io.coil-kt:coil:2.0.0"
+    implementation "io.coil-kt:coil:$coil"
 
     //DotsIndicator
-    implementation "com.tbuonomo:dotsindicator:4.3"
+    implementation "com.tbuonomo:dotsindicator:$dotsIndicator"
 
     //Datastore Preferences
-    implementation "androidx.datastore:datastore-preferences:1.0.0"
+    implementation "androidx.datastore:datastore-preferences:$datastore_preferences"
 
     //Facebook Shimmer
-    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation "com.facebook.shimmer:shimmer:$facebook_shimmer"
 }
