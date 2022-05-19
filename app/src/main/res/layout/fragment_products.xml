@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.kotlin.practice.viewmodel.ProductsFragmentViewModel" />
+            type="com.kotlin.practice.ui.fragment.main.screens.products.ProductsFragmentViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

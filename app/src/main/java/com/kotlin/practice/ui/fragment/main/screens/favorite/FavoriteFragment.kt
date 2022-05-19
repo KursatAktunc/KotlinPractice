@@ -1,4 +1,4 @@
-package com.kotlin.practice.ui.fragment.main.screens
+package com.kotlin.practice.ui.fragment.main.screens.favorite
 
 import android.util.Log
 import android.widget.Toast
@@ -6,7 +6,6 @@ import androidx.fragment.app.viewModels
 import com.kotlin.practice.R
 import com.kotlin.practice.base.BaseFragment
 import com.kotlin.practice.databinding.FragmentFavoriteBinding
-import com.kotlin.practice.viewmodel.FavoriteFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 private const val TAG: String = "FavoriteFragment"

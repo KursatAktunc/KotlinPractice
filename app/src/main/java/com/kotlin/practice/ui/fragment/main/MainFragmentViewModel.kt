@@ -1,4 +1,4 @@
-package com.kotlin.practice.viewmodel
+package com.kotlin.practice.ui.fragment.main
 
 import com.kotlin.practice.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

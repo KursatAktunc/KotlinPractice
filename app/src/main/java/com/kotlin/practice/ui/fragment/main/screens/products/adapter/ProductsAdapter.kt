@@ -1,11 +1,10 @@
-package com.kotlin.practice.adapter
+package com.kotlin.practice.ui.fragment.main.screens.products.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlin.practice.R
-import com.kotlin.practice.adapter.viewholder.ProductsViewHolder
 import com.kotlin.practice.databinding.ProductsItemBinding
 import com.kotlin.practice.models.Products
 

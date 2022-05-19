@@ -1,17 +1,16 @@
-package com.kotlin.practice.ui.fragment.main.screens
+package com.kotlin.practice.ui.fragment.main.screens.products
 
 import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.kotlin.practice.R
-import com.kotlin.practice.adapter.ProductsAdapter
+import com.kotlin.practice.ui.fragment.main.screens.products.adapter.ProductsAdapter
 import com.kotlin.practice.base.BaseFragment
 import com.kotlin.practice.base.ResourceStatus
 import com.kotlin.practice.databinding.FragmentProductsBinding
 import com.kotlin.practice.util.ToastHelper
 import com.kotlin.practice.util.extensions.hide
 import com.kotlin.practice.util.extensions.show
-import com.kotlin.practice.viewmodel.ProductsFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject

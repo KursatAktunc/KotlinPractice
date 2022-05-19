@@ -3,7 +3,6 @@ package com.kotlin.practice.ui.fragment.onboarding
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.kotlin.practice.R
-import com.kotlin.practice.adapter.OnBoardingAdapter
 import com.kotlin.practice.base.BaseFragment
 import com.kotlin.practice.databinding.FragmentOnboardingMainBinding
 import com.kotlin.practice.ui.fragment.onboarding.screens.FirstScreen
@@ -11,7 +10,6 @@ import com.kotlin.practice.ui.fragment.onboarding.screens.SecondScreen
 import com.kotlin.practice.ui.fragment.onboarding.screens.ThirdScreen
 import com.kotlin.practice.util.extensions.hide
 import com.kotlin.practice.util.extensions.show
-import com.kotlin.practice.viewmodel.OnBoardingViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

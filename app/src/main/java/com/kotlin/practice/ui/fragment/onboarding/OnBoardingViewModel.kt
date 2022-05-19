@@ -1,4 +1,4 @@
-package com.kotlin.practice.viewmodel
+package com.kotlin.practice.ui.fragment.onboarding
 
 import androidx.lifecycle.viewModelScope
 import com.kotlin.practice.base.BaseViewModel

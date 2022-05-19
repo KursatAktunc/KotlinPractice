@@ -1,4 +1,4 @@
-package com.kotlin.practice.viewmodel
+package com.kotlin.practice.ui.fragment.main.screens.favorite
 
 import com.kotlin.practice.base.BaseViewModel
 import com.kotlin.practice.repository.FavoriteRepository

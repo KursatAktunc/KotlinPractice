@@ -1,4 +1,4 @@
-package com.kotlin.practice.adapter
+package com.kotlin.practice.ui.fragment.onboarding
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

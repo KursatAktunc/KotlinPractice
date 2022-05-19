@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import com.kotlin.practice.R
 import com.kotlin.practice.base.BaseFragment
 import com.kotlin.practice.databinding.FragmentSplashBinding
-import com.kotlin.practice.viewmodel.SplashFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

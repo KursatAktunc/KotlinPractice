@@ -1,4 +1,4 @@
-package com.kotlin.practice.adapter.viewholder
+package com.kotlin.practice.ui.fragment.main.screens.products.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import coil.load

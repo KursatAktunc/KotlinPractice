@@ -8,7 +8,6 @@ import androidx.navigation.fragment.findNavController
 import com.kotlin.practice.R
 import com.kotlin.practice.base.BaseFragment
 import com.kotlin.practice.databinding.FragmentMainBinding
-import com.kotlin.practice.viewmodel.MainFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -17,9 +16,7 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
     override val mViewModel: MainFragmentViewModel by viewModels()
 
-    override fun bindLayoutId(): Int {
-        return R.layout.fragment_main
-    }
+    override fun bindLayoutId(): Int = R.layout.fragment_main
 
     override fun initViews() {
         mBinding.viewModel = mViewModel
@@ -57,7 +54,7 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
                     true
                 }
                 R.id.page_3 -> {
-
+                    //setFragment(ProductsFragment())
                     true
                 }
                 else -> false
@@ -66,6 +63,13 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
 
         //mBinding.bottomNavigation.setOnNavigationItemReselectedListener { } is deprecated bunun yerine if sorgusu ile kontrol sağladım
     }
+
+    /*private fun setFragment(fragment: Fragment) {
+        requireActivity().supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragmentContainerView2, fragment)
+            commit()
+        }
+    }*/
 
     /*override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

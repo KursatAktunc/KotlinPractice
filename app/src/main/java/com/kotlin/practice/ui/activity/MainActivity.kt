@@ -1,4 +1,4 @@
-package com.kotlin.practice
+package com.kotlin.practice.ui.activity
 
 import android.os.Build
 import android.os.Bundle
