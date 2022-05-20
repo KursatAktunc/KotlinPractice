@@ -1,22 +1,37 @@
 package com.kotlin.practice.ui.fragment.main
 
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
+import androidx.lifecycle.Lifecycle
+import androidx.navigation.NavController
+import androidx.navigation.ui.AppBarConfiguration
 import com.kotlin.practice.R
 import com.kotlin.practice.base.BaseFragment
 import com.kotlin.practice.databinding.FragmentMainBinding
+import com.kotlin.practice.ui.fragment.main.screens.favorite.FavoriteFragment
+import com.kotlin.practice.ui.fragment.main.screens.products.ProductsFragment
+import com.kotlin.practice.util.ToastHelper
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() {
 
-    private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
     override val mViewModel: MainFragmentViewModel by viewModels()
+    private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
+    private lateinit var navController: NavController
+    lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun bindLayoutId(): Int = R.layout.fragment_main
+
+    @Inject
+    lateinit var toastHelper: ToastHelper
 
     override fun initViews() {
         mBinding.viewModel = mViewModel
@@ -27,7 +42,34 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
                  as NavHostFragment
          val navController = navHostFragment.navController*/
 
-        setHasOptionsMenu(true) //TODO Deprecated search and fix
+        val menuHost: MenuHost = requireActivity()
+
+        menuHost.addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.top_app_bar, menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                if (actionBarDrawerToggle.onOptionsItemSelected(menuItem))
+                    return true
+                return when (menuItem.itemId) {
+                    R.id.edit -> {
+                        toastHelper.showToastLong("Clicked Edit")
+                        true
+                    }
+                    R.id.favorite -> {
+                        toastHelper.showToastLong("Clicked Favorite")
+                        true
+                    }
+                    R.id.more -> {
+                        toastHelper.showToastLong("Clicked More")
+                        true
+                    }
+                    else -> false
+                }
+            }
+
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
         actionBarDrawerToggle =
             ActionBarDrawerToggle(requireActivity(), mBinding.drawerLayout, 0, 0)
@@ -37,6 +79,13 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
         actionBarDrawerToggle.isDrawerSlideAnimationEnabled = true
         actionBarDrawerToggle.isDrawerIndicatorEnabled = true
 
+        /*val navHostFragment = childFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
+        navController = navHostFragment.navController
+        appBarConfiguration = AppBarConfiguration(navController.graph, mBinding.drawerLayout)
+
+        mBinding.navView.setupWithNavController(navController)*/
+
+        //TODO düzenle
         mBinding.bottomNavigation.setOnItemSelectedListener { item ->
             if (mBinding.bottomNavigation.selectedItemId == item.itemId) {
                 return@setOnItemSelectedListener false
@@ -44,24 +93,49 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
             when (item.itemId) {
                 R.id.page_1 -> {
                     /*navHostFragment.findNavController().navigate(R.id.productsFragment)*/
-                    childFragmentManager.primaryNavigationFragment?.findNavController()
-                        ?.navigate(R.id.productsFragment)
+                    /*childFragmentManager.primaryNavigationFragment?.findNavController()?.navigate(R.id.productsFragment)*/
+
+                    childFragmentManager.beginTransaction().apply {
+                        setReorderingAllowed(true)
+                        setCustomAnimations(
+                            androidx.navigation.ui.R.anim.nav_default_enter_anim,
+                            androidx.navigation.ui.R.anim.nav_default_exit_anim,
+                            androidx.navigation.ui.R.anim.nav_default_pop_enter_anim,
+                            androidx.navigation.ui.R.anim.nav_default_pop_exit_anim
+                        )
+                        addToBackStack(null)
+                        replace(R.id.fragmentContainerView2, ProductsFragment())
+                        commit()
+                    }
                     true
                 }
                 R.id.page_2 -> {
-                    childFragmentManager.primaryNavigationFragment?.findNavController()
-                        ?.navigate(R.id.favoriteFragment)
+                    /*childFragmentManager.primaryNavigationFragment?.findNavController()?.navigate(R.id.favoriteFragment)*/
+
+                    childFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView2, FavoriteFragment()).commit()
                     true
                 }
                 R.id.page_3 -> {
                     //setFragment(ProductsFragment())
+                    childFragmentManager.beginTransaction().apply {
+                        setReorderingAllowed(true)
+                        setCustomAnimations(
+                            androidx.navigation.ui.R.anim.nav_default_enter_anim,
+                            androidx.navigation.ui.R.anim.nav_default_exit_anim,
+                            androidx.navigation.ui.R.anim.nav_default_pop_enter_anim,
+                            androidx.navigation.ui.R.anim.nav_default_pop_exit_anim
+                        )
+                        addToBackStack(null)
+                        replace(R.id.fragmentContainerView2, FavoriteFragment())
+                        commit()
+                    }
                     true
                 }
                 else -> false
             }
         }
 
-        //mBinding.bottomNavigation.setOnNavigationItemReselectedListener { } is deprecated bunun yerine if sorgusu ile kontrol sağladım
     }
 
     /*private fun setFragment(fragment: Fragment) {
@@ -71,30 +145,4 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
         }
     }*/
 
-    /*override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentMainBinding.inflate(inflater, container, false)
-
-        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
-
-        setHasOptionsMenu(true)
-
-        actionBarDrawerToggle = ActionBarDrawerToggle(requireActivity(), binding.drawerLayout, 0, 0)
-        binding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
-        actionBarDrawerToggle.syncState()
-
-        actionBarDrawerToggle.isDrawerSlideAnimationEnabled = true
-        actionBarDrawerToggle.isDrawerIndicatorEnabled = true
-
-        return binding.root
-    }*/
-
-    //TODO Deprecated search and fix
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (actionBarDrawerToggle.onOptionsItemSelected(item))
-            return true
-        return super.onOptionsItemSelected(item)
-    }
 }

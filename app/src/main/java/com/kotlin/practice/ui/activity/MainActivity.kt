@@ -6,6 +6,11 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
+import androidx.navigation.findNavController
+import com.google.android.material.color.DynamicColors
+import com.kotlin.practice.R
 import com.kotlin.practice.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -17,9 +22,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        setSystemUIVisibility()
+
+        WindowInsetsControllerCompat(window, window.decorView).hide(WindowInsetsCompat.Type.statusBars())
+        //setSystemUIVisibility()
+        //DynamicColors.applyToActivitiesIfAvailable(application)
     }
 
     //TODO Deprecated search and fix
@@ -39,14 +46,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        setSystemUIVisibility()
+        //setSystemUIVisibility()
+        //WindowInsetsControllerCompat(window, window.decorView).hide(WindowInsetsCompat.Type.statusBars()) //Hem en üstteki statusbar'ı hem de gezinme çubuğunu gizlemek istersek Type.statusBars() yerine Type.systemBars() yapıyoruz
         super.onResume()
     }
-
-    /*override fun onSupportNavigateUp(): Boolean {
-       val navController = findNavController(R.id.fragmentContainerView)   //Dene
-       return navController.navigateUp() || super.onSupportNavigateUp()
-   }*/
 
     /*fun hideStatusBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {

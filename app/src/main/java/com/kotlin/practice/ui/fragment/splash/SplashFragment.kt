@@ -2,7 +2,6 @@ package com.kotlin.practice.ui.fragment.splash
 
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
@@ -25,10 +24,8 @@ class SplashFragment : BaseFragment<FragmentSplashBinding, SplashFragmentViewMod
         mBinding.imageView.animation = AnimationUtils.loadAnimation(context, R.anim.splash_anim)
 
         !mViewModel.isLoading.value
-        Log.d("SplashFragment", mViewModel.isLoading.value.toString())
         Handler(Looper.getMainLooper()).postDelayed({
             lifecycleScope.launchWhenResumed {
-                Log.d("SplashFragment", mViewModel.startDestination.value.toString())
                 findNavController().navigate(mViewModel.startDestination.value)
             }
         }, 2000)

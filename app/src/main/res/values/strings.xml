@@ -13,5 +13,8 @@
     <string name="onBoarding_food">FOOD</string>
     <string name="onBoarding_payment">PAYMENT</string>
     <string name="onBoarding_finish">FINIS</string>
+    <string name="content_description_search">content description search</string>
+    <string name="content_description_favorite">content description favorite</string>
+    <string name="content_description_more">content description more</string>
 
 </resources>

@@ -42,14 +42,14 @@ android {
 dependencies {
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    def nav_version = "2.4.2"
+    def nav_version = "2.5.0-rc01"
     def fragment_version = "1.5.0-rc01"
     def retrofit_version = "2.9.0"
     def lifecycle_version = "2.5.0-rc01"
     def dagger_hilt_version = "2.42"
     def coroutines = "1.6.1"
     def material = "1.7.0-alpha01"
-    def coil = "2.0.0"
+    def coil = '2.1.0'
     def dotsIndicator = "4.3"
     def datastore_preferences = "1.0.0"
     def facebook_shimmer = "0.5.0"

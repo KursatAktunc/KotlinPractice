@@ -4,9 +4,9 @@
       <root url="jar://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/4431daa569975c1df4d739a34f3df8ef/transformed/recyclerview-1.1.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/4431daa569975c1df4d739a34f3df8ef/transformed/recyclerview-1.1.0/AndroidManifest.xml" />
-      <root url="file://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/4431daa569975c1df4d739a34f3df8ef/transformed/recyclerview-1.1.0/res" />
       <root url="jar://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/4431daa569975c1df4d739a34f3df8ef/transformed/recyclerview-1.1.0/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/4431daa569975c1df4d739a34f3df8ef/transformed/recyclerview-1.1.0/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/caches/transforms-3/4431daa569975c1df4d739a34f3df8ef/transformed/recyclerview-1.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
