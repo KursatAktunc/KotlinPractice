@@ -1,7 +1,7 @@
 package com.kotlin.practice.di
 
 import android.content.Context
-import com.kotlin.practice.repository.FavoriteRepository
+import com.kotlin.practice.repository.PokemonRepository
 import com.kotlin.practice.repository.OnBoardingRepository
 import com.kotlin.practice.repository.ProductsRepository
 import com.kotlin.practice.service.ApiService
@@ -24,6 +24,6 @@ object RepositoryModule {
         OnBoardingRepository(context = context)
 
     @Provides
-    fun provideFavoriteRepository(@ApplicationContext context: Context) =
-        FavoriteRepository(context = context)
+    fun provideFavoriteRepository(apiService: ApiService): PokemonRepository =
+        PokemonRepository(apiService)
 }

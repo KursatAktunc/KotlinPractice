@@ -4,10 +4,10 @@ import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.kotlin.practice.R
-import com.kotlin.practice.ui.fragment.main.screens.products.adapter.ProductsAdapter
 import com.kotlin.practice.base.BaseFragment
 import com.kotlin.practice.base.ResourceStatus
 import com.kotlin.practice.databinding.FragmentProductsBinding
+import com.kotlin.practice.ui.fragment.main.screens.products.adapter.ProductsAdapter
 import com.kotlin.practice.util.ToastHelper
 import com.kotlin.practice.util.extensions.hide
 import com.kotlin.practice.util.extensions.show
@@ -33,7 +33,6 @@ class ProductsFragment : BaseFragment<FragmentProductsBinding, ProductsFragmentV
         mBinding.viewModel = mViewModel
 
         mViewModel.getAllProducts()
-
         viewLifecycleOwner.lifecycleScope.launch {
             mViewModel.resource.collect {
                 when (it.status) {

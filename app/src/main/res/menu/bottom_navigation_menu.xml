@@ -8,7 +8,7 @@
         android:id="@+id/page_2"
         android:enabled="true"
         android:icon="@drawable/ic_favorite_icon"
-        android:title="@string/bottom_nav_favorite" />
+        android:title="@string/bottom_nav_pokemon" />
     <item
         android:id="@+id/page_3"
         android:enabled="true"

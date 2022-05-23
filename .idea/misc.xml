@@ -9,12 +9,16 @@
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/drawable/ic_delivery.xml" value="0.3665" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/drawable/ic_food.xml" value="0.3665" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/drawable/ic_launcher_background.xml" value="0.252" />
+        <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.285" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/drawable/ic_menu_open.xml" value="0.278" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/drawable/ic_navigate_before.xml" value="0.3665" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/drawable/ic_navigate_next.xml" value="0.3665" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/drawable/ic_payment.xml" value="0.3665" />
+        <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/drawable/ic_pokeball.xml" value="0.285" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout-v29/fragment_products.xml" value="0.365625" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/activity_main.xml" value="0.33967391304347827" />
+        <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/favorite_item.xml" value="0.33" />
+        <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/favorite_item_shimmer.xml" value="0.49444444444444446" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/fragment_app_intro.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/fragment_favorite.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/fragment_first_screen.xml" value="0.3111413043478261" />
@@ -26,6 +30,7 @@
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/fragment_test.xml" value="0.33967391304347827" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/fragment_third_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/header_navigation_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/pokemon_item.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/product_item_shimmer.xml" value="0.365625" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/products_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sLyR_eXtreme/AndroidStudioProjects/Kotlin_Practice/app/src/main/res/layout/test.xml" value="0.36666666666666664" />

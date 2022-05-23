@@ -77,13 +77,13 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="favoriteFragment">
+                  <entry key="pokemonFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="190" />
-                            <option name="y" value="-6" />
+                            <option name="x" value="177" />
+                            <option name="y" value="-15" />
                           </Point>
                         </option>
                       </LayoutPositions>

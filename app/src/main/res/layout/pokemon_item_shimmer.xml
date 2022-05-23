@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:clickable="true"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:padding="8dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c8c8c8"
+                    android:textSize="@dimen/txtContent"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Titulo" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="#c8c8c8"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView4"
+                    tools:text="Poison" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#c8c8c8"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView5"
+                    tools:text="Poison" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#c8c8c8"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView6"
+                    tools:text="Water-Ice" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#c8c8c8"
+                    android:contentDescription="@string/onboard_description"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:clickable="true"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:padding="8dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c8c8c8"
+                    android:textSize="@dimen/txtContent"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Titulo" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView8"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="#c8c8c8"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView7"
+                    tools:text="Poison" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#c8c8c8"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView8"
+                    tools:text="Poison" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#c8c8c8"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView3"
+                    tools:text="Water-Ice" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#c8c8c8"
+                    android:contentDescription="@string/onboard_description"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</layout>
+
+
+    <!--<com.google.android.material.card.MaterialCardView
+                android:id="@+id/pokeCardView"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:focusable="true"
+                    android:padding="8dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textViewName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:textSize="@dimen/txtContent"
+                        android:textStyle="bold"
+                        tools:text="Titulo"
+                        android:background="#c8c8c8"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textViewID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="top"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="#001"
+                        android:background="#c8c8c8"/>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textViewType1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/textViewType2"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="8dp"
+                        android:background="#c8c8c8"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        tools:text="Poison"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textViewType2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/textViewType3"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="Poison"
+                        android:textSize="14sp"
+                        android:background="#c8c8c8"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textViewType3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="Water - Ice"
+                        android:textSize="14sp"
+                        android:background="#c8c8c8"/>
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="-16dp"
+                        android:layout_marginBottom="-24dp"
+                        android:adjustViewBounds="true"
+                        android:alpha="0.25"
+                        android:contentDescription="@string/onboard_description"
+                        android:src="@drawable/pokeball"
+                        android:background="#c8c8c8"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>-->

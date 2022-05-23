@@ -9,23 +9,15 @@
         android:name="com.kotlin.practice.ui.fragment.main.screens.products.ProductsFragment"
         android:label="ProductsFragment" >
         <action
-            android:id="@+id/action_productsFragment_to_favoriteFragment"
-            app:destination="@id/favoriteFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            android:id="@+id/action_productsFragment_to_pokemonFragment"
+            app:destination="@id/pokemonFragment" />
     </fragment>
     <fragment
-        android:id="@+id/favoriteFragment"
-        android:name="com.kotlin.practice.ui.fragment.main.screens.favorite.FavoriteFragment"
-        android:label="FavoriteFragment" >
+        android:id="@+id/pokemonFragment"
+        android:name="com.kotlin.practice.ui.fragment.main.screens.pokedex.PokemonFragment"
+        android:label="PokemonFragment" >
         <action
-            android:id="@+id/action_favoriteFragment_to_productsFragment"
-            app:destination="@id/productsFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            android:id="@+id/action_pokemonFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
     </fragment>
 </navigation>
