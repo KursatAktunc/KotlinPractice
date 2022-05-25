@@ -38,16 +38,20 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
         mBinding.viewModel = mViewModel
 
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
-        //(activity as AppCompatActivity?)!!.setSupportActionBar(mBinding.toolBar)
-        //(activity as AppCompatActivity?)!!.supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         setupViews()
+
+        //bottomnavigationview usage 1 basic
+        /*val navHostFragment = childFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
+        navController = navHostFragment.navController
+        mBinding.bottomNavigation.setupWithNavController(navController)*/
+
+        //bottomnavigationview usage 2 detailed
         mBinding.bottomNavigation.setOnItemSelectedListener { item ->
             if (mBinding.bottomNavigation.selectedItemId == item.itemId) {
                 return@setOnItemSelectedListener false
             }
             when (item.itemId) {
-                R.id.page_1 -> {
+                R.id.productsFragment -> {
                     /*navHostFragment.findNavController().navigate(R.id.productsFragment)*/
                     /*childFragmentManager.primaryNavigationFragment?.findNavController()?.navigate(R.id.productsFragment)*/
                     /*childFragmentManager.beginTransaction().replace(R.id.fragmentContainerView2, ProductsFragment()).commit()*/
@@ -55,13 +59,14 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
                     setFragment(ProductsFragment())
                     true
                 }
-                R.id.page_2 -> {
+                R.id.pokemonFragment -> {
                     setFragment(PokemonFragment())
                     true
                 }
                 else -> false
             }
         }
+
         mBinding.navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.search_item -> toastHelper.showToastShort("Clicked Search")
@@ -70,29 +75,24 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
             mBinding.drawerLayout.close()
             true
         }
-
-        /*val navController: NavController =
-            Navigation.findNavController(requireActivity(), R.id.fragmentContainerView2)
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
-            Log.e("MainFragment", "onDestinationChanged: " + destination.label)
-
-        }*/
-
-        /*val navHostFragment =
-            childFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
-        navController = navHostFragment.navController
-        appBarConfiguration = AppBarConfiguration(navController.graph, mBinding.drawerLayout)
-        mBinding.navView.setupWithNavController(navController)*/
     }
 
     private fun setupViews() {
-        //Navigation Drawer
+        //Showing the burger button on the ActionBar
+        (activity as AppCompatActivity?)!!.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         actionBarDrawerToggle =
             ActionBarDrawerToggle(requireActivity(), mBinding.drawerLayout, 0, 0)
         mBinding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
         actionBarDrawerToggle.isDrawerSlideAnimationEnabled = true
         actionBarDrawerToggle.isDrawerIndicatorEnabled = true
+
+        //BottomNavigationBar ile toolbar çalışıyor fakat burger menu animasyonu senkronize olmuyor
+        /*val navHostFragment = childFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
+        navController = navHostFragment.navController
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.productsFragment, R.id.pokemonFragment), mBinding.drawerLayout)
+        (activity as AppCompatActivity).setupActionBarWithNavController(navController,appBarConfiguration)
+        mBinding.bottomNavigation.setupWithNavController(navController)*/
 
         //Toolbar Menu
         val menuHost: MenuHost = requireActivity()

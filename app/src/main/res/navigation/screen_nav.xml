@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/screen_nav"
     app:startDestination="@id/productsFragment">
     <fragment
         android:id="@+id/productsFragment"
         android:name="com.kotlin.practice.ui.fragment.main.screens.products.ProductsFragment"
-        android:label="ProductsFragment" >
+        android:label="Products">
         <action
             android:id="@+id/action_productsFragment_to_pokemonFragment"
             app:destination="@id/pokemonFragment" />
@@ -15,7 +14,7 @@
     <fragment
         android:id="@+id/pokemonFragment"
         android:name="com.kotlin.practice.ui.fragment.main.screens.pokedex.PokemonFragment"
-        android:label="PokemonFragment" >
+        android:label="Pokemon">
         <action
             android:id="@+id/action_pokemonFragment_to_productsFragment"
             app:destination="@id/productsFragment" />

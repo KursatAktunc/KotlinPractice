@@ -48,7 +48,7 @@ dependencies {
     def lifecycle_version = "2.5.0-rc01"
     def dagger_hilt_version = "2.42"
     def coroutines = "1.6.1"
-    def material = "1.7.0-alpha01"
+    def material = "1.7.0-alpha02"
     def coil = '2.1.0'
     def dotsIndicator = "4.3"
     def datastore_preferences = "1.0.0"
