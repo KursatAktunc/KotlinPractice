@@ -8,6 +8,17 @@
 
     <string name="onboard_description">onBoardDescription</string>
 
+    <string name="mail_subheader_title">Mail</string>
+    <string name="inbox_title">Gelen Kutusu</string>
+    <string name="outbox_title">Giden Kutusu</string>
+    <string name="favourites_title">Favoriler</string>
+    <string name="header_title">Kürşat AKTUNÇ</string>
+    <string name="header_text">github.com/KursatAktunc</string>
+    <string name="labels_subheader_title">Kullanıcı</string>
+    <string name="label_one_title">Ayarlar</string>
+    <string name="label_two_title">Çıkış</string>
+    <string name="search_title">Ara</string>
+
     <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
     <string name="onBoarding_fast">FAST</string>
     <string name="onBoarding_food">FOOD</string>

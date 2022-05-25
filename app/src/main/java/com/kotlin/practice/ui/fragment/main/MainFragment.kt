@@ -38,9 +38,10 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
         mBinding.viewModel = mViewModel
 
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        //(activity as AppCompatActivity?)!!.setSupportActionBar(mBinding.toolBar)
+        //(activity as AppCompatActivity?)!!.supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         setupViews()
-
         mBinding.bottomNavigation.setOnItemSelectedListener { item ->
             if (mBinding.bottomNavigation.selectedItemId == item.itemId) {
                 return@setOnItemSelectedListener false
@@ -49,37 +50,52 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
                 R.id.page_1 -> {
                     /*navHostFragment.findNavController().navigate(R.id.productsFragment)*/
                     /*childFragmentManager.primaryNavigationFragment?.findNavController()?.navigate(R.id.productsFragment)*/
+                    /*childFragmentManager.beginTransaction().replace(R.id.fragmentContainerView2, ProductsFragment()).commit()*/
 
                     setFragment(ProductsFragment())
                     true
                 }
                 R.id.page_2 -> {
-                    /*childFragmentManager.primaryNavigationFragment?.findNavController()?.navigate(R.id.favoriteFragment)*/
-
-                    /*childFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView2, FavoriteFragment()).commit()*/
-
                     setFragment(PokemonFragment())
-                    true
-                }
-                R.id.page_3 -> {
-                    //setFragment(ProductsFragment())
                     true
                 }
                 else -> false
             }
         }
+        mBinding.navView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.search_item -> toastHelper.showToastShort("Clicked Search")
+            }
+            menuItem.isChecked = true
+            mBinding.drawerLayout.close()
+            true
+        }
 
-        /*val navHostFragment = childFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
+        /*val navController: NavController =
+            Navigation.findNavController(requireActivity(), R.id.fragmentContainerView2)
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            Log.e("MainFragment", "onDestinationChanged: " + destination.label)
+
+        }*/
+
+        /*val navHostFragment =
+            childFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
         navController = navHostFragment.navController
         appBarConfiguration = AppBarConfiguration(navController.graph, mBinding.drawerLayout)
         mBinding.navView.setupWithNavController(navController)*/
     }
 
     private fun setupViews() {
-        //Navigation
-        val menuHost: MenuHost = requireActivity()
+        //Navigation Drawer
+        actionBarDrawerToggle =
+            ActionBarDrawerToggle(requireActivity(), mBinding.drawerLayout, 0, 0)
+        mBinding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
+        actionBarDrawerToggle.syncState()
+        actionBarDrawerToggle.isDrawerSlideAnimationEnabled = true
+        actionBarDrawerToggle.isDrawerIndicatorEnabled = true
 
+        //Toolbar Menu
+        val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
                 menuInflater.inflate(R.menu.top_app_bar, menu)
@@ -106,13 +122,6 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
             }
 
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
-
-        actionBarDrawerToggle =
-            ActionBarDrawerToggle(requireActivity(), mBinding.drawerLayout, 0, 0)
-        mBinding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
-        actionBarDrawerToggle.syncState()
-        actionBarDrawerToggle.isDrawerSlideAnimationEnabled = true
-        actionBarDrawerToggle.isDrawerIndicatorEnabled = true
     }
 
     private fun setFragment(fragment: Fragment) {
@@ -129,5 +138,4 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
             commit()
         }
     }
-
 }

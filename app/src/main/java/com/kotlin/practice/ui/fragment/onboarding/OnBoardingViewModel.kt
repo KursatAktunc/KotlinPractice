@@ -3,7 +3,6 @@ package com.kotlin.practice.ui.fragment.onboarding
 import androidx.lifecycle.viewModelScope
 import com.kotlin.practice.base.BaseViewModel
 import com.kotlin.practice.repository.OnBoardingRepository
-import com.kotlin.practice.ui.fragment.onboarding.OnBoardingMainFragmentDirections
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

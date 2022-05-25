@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //TODO Deprecated search and fix
-    private fun setSystemUIVisibility() {
+    /*private fun setSystemUIVisibility() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             val window = window.insetsController!!
             val windows = WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars()
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                     View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
             window.decorView.systemUiVisibility = view
         }
-    }
+    }*/
 
     override fun onResume() {
         //setSystemUIVisibility()

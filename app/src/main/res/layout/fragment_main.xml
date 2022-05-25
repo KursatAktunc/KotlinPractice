@@ -20,8 +20,33 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true">
+            android:layout_height="match_parent">
+
+            <!--<com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/toolBarTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/app_name"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.appbar.MaterialToolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>-->
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView2"
@@ -37,7 +62,6 @@
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottom_navigation"
-                style="@style/Widget.Material3.BottomNavigationView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -52,9 +76,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:fitsSystemWindows="true"
             app:headerLayout="@layout/header_navigation_drawer"
             app:menu="@menu/navigation_drawer" />
+        <!--android:layout_marginTop="@dimen/abc_action_bar_default_height_material" navigation drawerin custom toolbarın üzerinde açılmasını
+         durdurmak için eklenen kod. Orjinal toolbar kullanılıyorsa gerek yoktur-->
 
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>
